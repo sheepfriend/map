@@ -52,13 +52,10 @@
 
             geojsonMarkerOptions.content=feature.properties.STOLEN_VAL;
 
-            if(feature.properties.STOLEN_VAL == 1){
-                return L.marker(latlng, geojsonMarkerOptions);
-            }
-            else{
+
                 geojsonMarkerOptions.fillColor = feature.properties.COLOR;
                 return L.circleMarker(latlng, geojsonMarkerOptions);
-            }
+
         }
     });
 
